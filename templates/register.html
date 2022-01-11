@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="../static/register.css" />
+    <title>House-OF-Bake</title>
+  </head>
+  <body>
+    <nav class="navbar bg-dark">
+      <h1>
+        <a href="/"></i> House Of Bake </a>
+      </h1>
+     
+    </nav>
+   
+    <section class="container">
+      <h1 class="large text-primary">Sign Up</h1>
+      <p class="lead"><i class="fas fa-user"></i> Create Your Account</p>
+
+      <form action="/submit" method="POST" class="form">
+
+        <div class="form-group">
+          <input type="text"
+                 name="customer"
+          placeholder="Name"
+            />
+        </div>
+        <div class="form-group">
+
+          <input type="email"
+                 name="email"
+         placeholder="Email Address" />
+        </div>
+
+        <div class="form-group">
+          <input type="password"
+                name="password"
+         placeholder="Password"
+            minlength="6" />
+        </div>
+        <div class="form-group">
+          <input type="password"
+                 name="password2"
+          placeholder="Confirm Password" 
+           minlength="6" />
+        </div>
+        <input type="submit" value="Register" class="btn btn-primary" />
+      </form>
+      <p class="my-1">
+        Already have an account? <a href="login.html">Sign In</a>
+      </p>
+
+    {% if message %}
+    <p class="message">{{ message | safe }}</p>
+     {% endif %}
+    </section>
+  </body>
+</html>
